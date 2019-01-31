@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { PhotoService } from './photos/photo/photo.service';
 
@@ -7,12 +7,17 @@ import { PhotoService } from './photos/photo/photo.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  photos: Object[] = [];
+export class AppComponent implements OnInit {
+  
+  photos: any[] = [];
 
-  constructor(photoService: PhotoService){
-
-    photoService.listFromUser('flavio')
+  //Construtor usado somente para injeção de dependência
+  constructor(private photoService: PhotoService){}
+  
+  //Ciclo de vida do componente, fase OnInit ocorre depois de uma instância de APPComponent
+  ngOnInit(): void{
+    this.photoService
+    .listFromUser('flavio')
     .subscribe(photos => this.photos = photos);
   }
 }
