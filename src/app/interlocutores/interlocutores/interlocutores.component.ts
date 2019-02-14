@@ -10,7 +10,7 @@ export class InterlocutoresComponent implements OnInit {
 
     interlocutores = INTERLOCUTORES;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() { }
 
