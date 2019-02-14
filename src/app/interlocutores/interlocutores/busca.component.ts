@@ -17,6 +17,7 @@ export class BuscaComponent implements OnInit {
 
   ngOnInit() {
     // FAZ MESMA COISA QUE ESTA NO CONSTRUCTOR
+    // no subscribe pode passar uma funcao com o parametro da url para filtrar o que deseja mostrar na tela (aula 54)
     this.inscricao = this.route.params.subscribe(
       (params: any) => {
         this.nome = params['nome'];
