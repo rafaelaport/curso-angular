@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { INTERLOCUTORES } from './mock-interlocutores';
+import { INTERLOCUTORES } from '../mock/mock-interlocutores';
 
 @Component({
   selector: 'app-interlocutores',

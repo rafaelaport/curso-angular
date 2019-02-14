@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { InterlocutoresComponent } from './interlocutores.component';
+import { InterlocutoresComponent } from './interlocutores/interlocutores.component';
 
 @NgModule({
   imports: [
